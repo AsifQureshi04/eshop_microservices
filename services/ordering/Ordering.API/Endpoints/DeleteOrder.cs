@@ -5,7 +5,7 @@ namespace Ordering.API.Endpoints;
 
 public record DeleteOrderResponse(bool IsSuccess);
 public class DeleteOrder : ICarterModule
-{
+{    
    public void AddRoutes(IEndpointRouteBuilder app)
    {
         app.MapDelete("/orders/{id}", async (Guid Id, ISender sender) =>
